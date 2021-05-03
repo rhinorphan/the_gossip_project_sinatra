@@ -20,4 +20,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit 
 Nulla semper ullamcorper massa ut convallis. Curabitur leo dolor, tincidunt et eros vel, ultrices laoreet nisl. Aenean maximus tristique leo, vel maximus quam facilisis a.
 
 ## Sources
-This app is created through the [The Hacking Project](https://www.thehackingproject.org) bootcamp and made with [@jocelinqueau](https://github.com/jocelinqueau)
+This app is created through the [The Hacking Project](https://www.thehackingproject.org) bootcamp and made with [@jocelinqueau](https://github.com/jocelinqueau), [@lehoax](https://github.com/lehoax)
