@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Commenter un potin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="d-flex justify-content-center h-25">
+      <h1 class="display-4" style="margin-top: 70px">Commenter le potin n°<%= params['id'].to_i + 1 %></h1>
+    </div>
+    <div class="container">
+      <p class="lead">Commente le potin via le formulaire ci-dessous</p>
+      <form action="/gossips/<%= params['id']%>/comment/new" method="POST">
+        <div class="form-group">
+          <label for="author_name">Saisi ton nom</label>
+          <input type ="text" class="form-control" id="author_name" name="comment_author" placeholder="Nom"/>
+        </div>
+        <div class="form-group">
+          <label for="content">Lâche ton commentaire</label>
+          <input type ="text" class="form-control" id="content" name="comment_content" placeholder="Commentaire"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Publier</button>
+      </form>
+    </div>
+  </body>
+</html>

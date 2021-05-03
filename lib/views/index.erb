@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="d-flex justify-content-center h-25">
+      <h1 class="display-4" style="margin-top: 70px">Bienvenue dans The Gossip Project</h1>
+    </div>
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <p class="lead">Tu souhaites créer un nouveau potin ?</p>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a class="btn btn-primary" href="/gossips/new/">Clique ici</a>
+        <p></p>
+      </div>
+      <div class="d-flex justify-content-center">
+        <p class="lead" style="margin-top: 70px">Voici les potins de notre base de données :</p>
+      </div> 
+        <% gossips.each.with_index do |gossip, id| %>
+          <div class="card">
+            <div class="card-header">
+              <a class="btn btn-secondary" href="/gossips/<%=id%>">Potin n°<%=id.to_i + 1%></a>
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p><%= gossip.content %></p>
+                <footer class="blockquote-footer"><%= gossip.author %></footer>
+              </blockquote>
+              <p></p>
+              <a class="btn btn-light" href="/gossips/<%=id%>/comment/new">Ecrire un commentaire</a>
+            </div>
+          </div>
+          </br>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>
